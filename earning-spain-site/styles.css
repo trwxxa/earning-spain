@@ -1,0 +1,74 @@
+:root{
+  --blue:#1f4e79;
+  --terra:#c65d3b;
+  --ink:#2f2f2f;
+  --paper:#ffffff;
+  --muted:#666;
+  --line:#eee;
+  --footer:#f6f6f6;
+  --max: 980px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Montserrat, Arial, sans-serif;color:var(--ink);line-height:1.7;background:var(--paper)}
+.container{max-width:var(--max);margin:0 auto}
+.nav{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line)}
+.nav__inner{padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1180px;margin:0 auto}
+.nav__brand{font-family:"Playfair Display", Georgia, serif;color:var(--blue);font-size:1.1rem;letter-spacing:.2px;white-space:nowrap}
+.nav__links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 18px}
+.nav__links a{text-decoration:none;color:var(--ink);font-weight:600;font-size:.95rem}
+.nav__links a:hover{color:var(--terra)}
+.nav__progress{height:3px;background:transparent}
+.nav__progress-bar{height:3px;width:0%;background:var(--terra)}
+.section{padding:90px 18px;text-align:center}
+.section--hero{padding-top:80px}
+h1,h2{font-family:"Playfair Display", Georgia, serif;color:var(--blue);margin:0 0 18px 0}
+.hero__title{font-size:3.1rem}
+.section__title{font-size:2.4rem}
+.hero__lede{margin:0 auto 26px auto;font-size:1.08rem}
+.hero__body,.section__body{margin:0 auto 26px auto;font-size:1.05rem}
+.section__tagline{margin:18px auto 8px auto;color:#444}
+.img{width:100%;border-radius:14px;background:#ddd;display:flex;align-items:center;justify-content:center;color:var(--muted);font-style:italic;letter-spacing:.3px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.img--hero{height:min(80vh, 720px);margin:42px 0}
+.img--wide{height:min(70vh, 640px);margin:38px 0}
+.img--mid{height:min(45vh, 460px);margin:28px 0}
+.img--bottom{height:280px}
+.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+.btn{display:inline-block;margin-top:22px;padding:12px 18px;border-radius:999px;border:1px solid rgba(198,93,59,.35);color:var(--terra);text-decoration:none;font-weight:700}
+.btn:hover{border-color:rgba(198,93,59,.75);text-decoration:none}
+.navrow{margin-top:28px}
+.footer{padding:90px 18px;background:var(--footer);text-align:center;border-top:1px solid var(--line)}
+.footer p{margin:0 auto 14px auto;max-width:var(--max)}
+
+/* =========================
+   IMG-SETUP: Replace images
+   =========================
+   1) Put your files into /assets/images/
+   2) Replace the filenames below.
+*/
+.img--hero{background-image:url('../images/hero.jpg');background-size:cover;background-position:center}
+.img--tarragona-1{background-image:url('../images/tarragona1.jpg');background-size:cover;background-position:center}
+.img--tarragona-2{background-image:url('../images/tarragona2.jpg');background-size:cover;background-position:center}
+.img--tarragona-b1{background-image:url('../images/tarragona_b1.jpg');background-size:cover;background-position:center}
+.img--tarragona-b2{background-image:url('../images/tarragona_b2.jpg');background-size:cover;background-position:center}
+.img--barcelona-1{background-image:url('../images/barcelona1.jpg');background-size:cover;background-position:center}
+.img--barcelona-2{background-image:url('../images/barcelona2.jpg');background-size:cover;background-position:center}
+.img--barcelona-b1{background-image:url('../images/barcelona_b1.jpg');background-size:cover;background-position:center}
+.img--barcelona-b2{background-image:url('../images/barcelona_b2.jpg');background-size:cover;background-position:center}
+.img--madrid-1{background-image:url('../images/madrid1.jpg');background-size:cover;background-position:center}
+.img--madrid-2{background-image:url('../images/madrid2.jpg');background-size:cover;background-position:center}
+.img--madrid-b1{background-image:url('../images/madrid_b1.jpg');background-size:cover;background-position:center}
+.img--madrid-b2{background-image:url('../images/madrid_b2.jpg');background-size:cover;background-position:center}
+.img--toledo-1{background-image:url('../images/toledo1.jpg');background-size:cover;background-position:center}
+.img--toledo-2{background-image:url('../images/toledo2.jpg');background-size:cover;background-position:center}
+.img--toledo-b1{background-image:url('../images/toledo_b1.jpg');background-size:cover;background-position:center}
+.img--toledo-b2{background-image:url('../images/toledo_b2.jpg');background-size:cover;background-position:center}
+
+/* Responsive */
+@media (max-width: 720px){
+  .nav__inner{flex-direction:column;gap:10px}
+  .hero__title{font-size:2.5rem}
+  .section__title{font-size:2rem}
+  .bottom-grid{grid-template-columns:1fr}
+  .img--bottom{height:240px}
+}
